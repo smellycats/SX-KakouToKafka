@@ -1,0 +1,15 @@
+kafka_producer:
+  services: 68.156.106.9:9092, 68.156.106.10:9092, 68.156.106.11:9092, 68.156.106.12:9092, 68.156.106.13:9092, 68.156.106.14:9092, 68.156.106.15:9092
+  topic: kk_hz
+consul:
+  ttl: 30
+  lock_name: kafka-kk-hy-lock
+  path: kafka03/kk/hy/
+kakou:
+  host: kong01.service.consul
+  port: 8000
+  path: /kk-hy
+  apikey: SdAD5gQZElLSBgZlFgtoRGlQQfW9nEW8
+  name: kakouHy
+  step: 500
+  kkdd: '441303000'
